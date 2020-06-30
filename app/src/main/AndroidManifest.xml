@@ -28,7 +28,7 @@
             android:parentActivityName=".ui.listimages.ListImagesInFolderActivity"></activity>
         <activity
             android:name=".ui.imageselection.SelectedImagesActivity"
-            android:parentActivityName=".ui.compareimages.CompareImagesActivity" />
+            android:parentActivityName=".ui.compareimages.CompareImagesActivity"/>
     </application>
 
 </manifest>

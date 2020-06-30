@@ -8,42 +8,44 @@
     <LinearLayout
         android:id="@+id/imageAndExifLayout"
         android:orientation="vertical"
-        android:padding="6dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <!-- The PhotoView will be added programatically in the ImagePagerAdapter -->
-        <ch.want.imagecompare.ui.FailsafeViewPager
-            android:id="@+id/viewpager"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/exifIso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:textSize="14sp" />
+            <ch.want.imagecompare.ui.FailsafeViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/exifIso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="12sp" />
+        </FrameLayout>
+
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/left_nav"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:alpha="0.7"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_gravity="center_vertical|start"
-        android:src="@drawable/ic_chevron_left"
-        android:contentDescription="@string/action_nav_left" />
+        android:contentDescription="@string/action_nav_left"
+        android:src="@android:drawable/ic_media_previous" />
 
     <ImageButton
         android:id="@+id/right_nav"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:alpha="0.7"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_gravity="center_vertical|end"
-        android:src="@drawable/ic_chevron_right"
-        android:contentDescription="@string/action_nav_right" />
+        android:contentDescription="@string/action_nav_right"
+        android:src="@android:drawable/ic_media_next" />
 
     <CheckBox
         android:id="@+id/selectImageCheckbox"
@@ -52,6 +54,5 @@
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
-        android:alpha="0.7"
-        android:button="@drawable/ic_checkbox_36dp" />
+        android:button="@drawable/ic_checkbox_24dp" />
 </FrameLayout>

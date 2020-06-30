@@ -8,7 +8,7 @@
     <string name="action_nav_right">Navigate right</string>
     <string name="action_nav_left">Navigate left</string>
 
-    <string name="sync_state">Sync zoom and pan</string>
+    <string name="sync_state">Sync</string>
     <string name="confirm_selection">Image was added to selection</string>
     <string name="show_selection">Show selection</string>
     <string name="checkbox_dark">Dark checkboxes</string>
