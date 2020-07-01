@@ -1,6 +1,7 @@
 package ch.want.imagecompare.ui.compareimages;
 
 import android.graphics.PointF;
+import android.util.Log;
 
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 
@@ -50,6 +51,7 @@ public class ImageViewListener implements SubsamplingScaleImageView.OnImageEvent
 
     @Override
     public void onScaleChanged(final float newScale, final int origin) {
+//        Log.d("yama","newScale="+newScale);
         listeners.forEach(l -> l.onZoomChanged(newScale));
     }
 

@@ -26,6 +26,7 @@ import ch.want.imagecompare.domain.CrossViewEventHandler;
 class ImagePagerAdapter extends PagerAdapter {
 
     private static final int ID_OFFSET = 100000;
+    private static final float max_scale=50.f;
     private CrossViewEventHandler matrixChangeListener;
     private ZoomPanRestoreHandler zoomPanHandler;
     private final ImageViewListener imageViewListener = new ImageViewListener();
@@ -104,6 +105,8 @@ class ImagePagerAdapter extends PagerAdapter {
         photoView.setOnStateChangedListener(imageViewListener);
         zoomPanHandler.resetImageResourceState();
         photoView.setImage(ImageSource.uri(galleryImageList.get(position).getFileUri()));
+        photoView.setMaxScale(max_scale);
+
         highResPositions.put(position, photoView);
     }
 

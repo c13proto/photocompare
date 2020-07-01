@@ -1,6 +1,7 @@
 package ch.want.imagecompare.ui.compareimages;
 
 import android.graphics.PointF;
+import android.util.Log;
 
 import java.util.Optional;
 
