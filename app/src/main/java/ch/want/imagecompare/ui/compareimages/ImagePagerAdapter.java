@@ -106,6 +106,7 @@ class ImagePagerAdapter extends PagerAdapter {
         zoomPanHandler.resetImageResourceState();
         photoView.setImage(ImageSource.uri(galleryImageList.get(position).getFileUri()));
         photoView.setMaxScale(max_scale);
+//        photoView.setDebug(true);
 
         highResPositions.put(position, photoView);
     }

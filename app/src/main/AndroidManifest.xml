@@ -22,10 +22,10 @@
         </activity>
         <activity
             android:name=".ui.listimages.ListImagesInFolderActivity"
-            android:parentActivityName=".ui.listfolders.ListAllImageFoldersActivity"></activity>
+            android:parentActivityName=".ui.listfolders.ListAllImageFoldersActivity" />
         <activity
             android:name=".ui.compareimages.CompareImagesActivity"
-            android:parentActivityName=".ui.listimages.ListImagesInFolderActivity"></activity>
+            android:parentActivityName=".ui.listimages.ListImagesInFolderActivity" />
         <activity
             android:name=".ui.imageselection.SelectedImagesActivity"
             android:parentActivityName=".ui.compareimages.CompareImagesActivity"/>
