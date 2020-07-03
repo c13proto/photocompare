@@ -57,12 +57,14 @@ class ImagePagerAdapter extends PagerAdapter {
     @Override
     public View instantiateItem(final ViewGroup container, final int position) {
         final SubsamplingScaleImageView photoView = buildPhotoView(container.getContext(), position);
+        photoView.setBitmapFiltering(false);//disable anti-aliasing
         container.addView(photoView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         if (futureHighResIndex != null && futureHighResIndex == position) {
             loadHighResImage(photoView, position);
         } else {
             loadLowResImage(photoView, position);
         }
+        photoView.setMaxScale(max_scale);
         return photoView;
     }
 
@@ -105,8 +107,6 @@ class ImagePagerAdapter extends PagerAdapter {
         photoView.setOnStateChangedListener(imageViewListener);
         zoomPanHandler.resetImageResourceState();
         photoView.setImage(ImageSource.uri(galleryImageList.get(position).getFileUri()));
-        photoView.setMaxScale(max_scale);
-//        photoView.setDebug(true);
 
         highResPositions.put(position, photoView);
     }
